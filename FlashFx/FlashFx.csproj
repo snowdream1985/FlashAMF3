@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8119944A-8614-4D30-AD5A-4AC58525A65C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlashFx</RootNamespace>
+    <AssemblyName>FlashFx</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FlashFx\AMF0TypeCode.cs" />
+    <Compile Include="FlashFx\AMF3TypeCode.cs" />
+    <Compile Include="FlashFx\AMFBody.cs" />
+    <Compile Include="FlashFx\AMFDeserializer.cs" />
+    <Compile Include="FlashFx\AMFHeader.cs" />
+    <Compile Include="FlashFx\AMFMessage.cs" />
+    <Compile Include="FlashFx\AMFReader.cs" />
+    <Compile Include="FlashFx\AMFSerializer.cs" />
+    <Compile Include="FlashFx\AMFWriter.cs" />
+    <Compile Include="FlashFx\ArrayCollection.cs" />
+    <Compile Include="FlashFx\ASObject.cs" />
+    <Compile Include="FlashFx\ASObjectProxy.cs" />
+    <Compile Include="FlashFx\ByteArray.cs" />
+    <Compile Include="FlashFx\ClassDefinition.cs" />
+    <Compile Include="FlashFx\ClassMember.cs" />
+    <Compile Include="FlashFx\DataInput.cs" />
+    <Compile Include="FlashFx\DataOutput.cs" />
+    <Compile Include="FlashFx\ExternalizableProxy.cs" />
+    <Compile Include="FlashFx\IDataInput.cs" />
+    <Compile Include="FlashFx\IDataOutput.cs" />
+    <Compile Include="FlashFx\IExternalizable.cs" />
+    <Compile Include="FlashFx\IObjectProxy.cs" />
+    <Compile Include="FlashFx\ObjectEncoding.cs" />
+    <Compile Include="FlashFx\ObjectFactory.cs" />
+    <Compile Include="FlashFx\ObjectProxy.cs" />
+    <Compile Include="FlashFx\ObjectProxyRegistry.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0AMF3TagReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0ArrayReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0ASObjectReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0AssociativeArrayReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0BooleanReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0DateTimeReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0LongStringReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0NullReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0NumberReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0ObjectReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0ReferenceReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0StringReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF0\AMF0XmlReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3ArrayReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3BooleanFalseReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3BooleanTrueReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3ByteArrayReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3DateTimeReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3DoubleVectorReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3IntegerReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3IntVectorReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3NullReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3NumberReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3ObjectReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3ObjectVectorReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3StringReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3UIntVectorReader.cs" />
+    <Compile Include="FlashFx\Readers\AMF3\AMF3XmlReader.cs" />
+    <Compile Include="FlashFx\Readers\AMFUnknownTagReader.cs" />
+    <Compile Include="FlashFx\Readers\IAMFReader.cs" />
+    <Compile Include="FlashFx\Readers\MovieclipMarker.cs" />
+    <Compile Include="FlashFx\Readers\UnsupportedMarker.cs" />
+    <Compile Include="FlashFx\ResponseBody.cs" />
+    <Compile Include="FlashFx\Writers\AMF0\AMF0ArrayWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF0\AMF0ASObjectWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF0\AMF0BooleanWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF0\AMF0DateTimeWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF0\AMF0NullWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF0\AMF0NumberWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF0\AMF0ObjectWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF0\AMF0StringWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF0\AMF0XmlDocumentWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3ArrayWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3ASObjectWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3BooleanWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3ByteArrayWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3DateTimeWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3DBNullWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3DoubleVectorWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3DoubleWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3IntVectorWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3IntWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3ObjectVectorWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3ObjectWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3StringWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3UIntVectorWriter.cs" />
+    <Compile Include="FlashFx\Writers\AMF3\AMF3XmlDocumentWriter.cs" />
+    <Compile Include="FlashFx\Writers\IAMFWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FlashFx\ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
